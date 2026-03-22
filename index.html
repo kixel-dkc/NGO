@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu NGO - Empowering Through Education & Community</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --secondary: #000000;
+            --accent: #16a34a;
+            --light: #f5f5f5;
+            --dark: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem !important; }
+            h2 { font-size: 2rem !important; }
+            h3 { font-size: 1.5rem !important; }
+        }
+        
+        .ubuntu-gradient {
+            background: linear-gradient(90deg, var(--primary) 0%, #991b1b 50%, var(--accent) 100%);
+        }
+        
+        .ubuntu-solid {
+            background-color: var(--primary);
+        }
+        
+        .club-card {
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .club-card:hover {
+            transform: translateX(8px);
+            border-left-color: var(--accent);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('IMAGES/WhatsApp Image 2026-02-06 at 22.23.13.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .pan-african-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('IMAGES/WhatsApp Image 2026-02-06 at 22.31.26.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .feminine-hygiene-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('IMAGES/femine.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .impact-counter {
+            transition: all 0.5s ease;
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes checkmark {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes checkmark-draw {
+            0% { stroke-dashoffset: 100; }
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        .checkmark-animate {
+            animation: checkmark 0.5s ease-out forwards;
+        }
+        
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #16a34a;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        
+        .checkmark-check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+        }
+        
+        @keyframes stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+    </style>
+    <!-- FormBold Script -->
+    <!-- <script src="https://formbold.com/js/formbold.js"></script> -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 w-full z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="IMAGES/Ubuntu .PNG" alt="Ubuntu NGO Logo" class="h-12 md:h-16 w-auto">
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="lg:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Desktop menu -->
+            <ul class="hidden lg:flex space-x-8">
+                <li><a href="#home" class="text-white hover:text-green-400 transition">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-green-400 transition">About</a></li>
+                <li><a href="#programs" class="text-white hover:text-green-400 transition">Programs</a></li>
+                <li><a href="#clubs" class="text-white hover:text-green-400 transition">Clubs</a></li>
+                <li><a href="#involve" class="text-white hover:text-green-400 transition">Get Involved</a></li>
+                <li><a href="#contact" class="text-white hover:text-green-400 transition">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden absolute top-full left-0 w-full bg-black py-4 border-t border-red-600">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#home" class="text-white hover:text-green-400 transition">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-green-400 transition">About</a></li>
+                <li><a href="#programs" class="text-white hover:text-green-400 transition">Programs</a></li>
+                <li><a href="#clubs" class="text-white hover:text-green-400 transition">Clubs</a></li>
+                <li><a href="#involve" class="text-white hover:text-green-400 transition">Get Involved</a></li>
+                <li><a href="#contact" class="text-white hover:text-green-400 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-8 md:py-16 text-white">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 md:mb-6">Empowering Through <span class="text-green-400">Education</span> & Community</h1>
+                <p class="text-lg md:text-xl mb-6 md:mb-8">Ubuntu NGO is dedicated to teaching Pan-African studies to children, distributing feminine hygiene products, and cultivating diverse clubs that empower youth across Africa.</p>
+                <div class="flex flex-col sm:flex-wrap sm:flex-row gap-3 md:gap-4">
+                    <a href="#involve" class="px-8 py-4 md:px-10 bg-red-600 hover:bg-red-700 font-bold transition text-center inline-block">Get Involved</a>
+                    <a href="#programs" class="px-8 py-4 md:px-10 bg-transparent border-2 border-white hover:bg-white hover:text-black font-bold transition text-center inline-block">Our Programs</a>
+                </div>
+            </div>
+            
+            <!-- Impact Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 mt-12 md:mt-20">
+                <div class="bg-black bg-opacity-60 p-4 md:p-8 text-center border-r border-red-600 impact-counter">
+                    <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2" id="children-count">0</div>
+                    <div class="text-lg md:text-xl uppercase tracking-wider">Children Educated</div>
+                </div>
+                <div class="bg-black bg-opacity-60 p-4 md:p-8 text-center border-r border-red-600 impact-counter">
+                    <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2" id="products-count">0</div>
+                    <div class="text-lg md:text-xl uppercase tracking-wider">Products Distributed</div>
+                </div>
+                <div class="bg-black bg-opacity-60 p-4 md:p-8 text-center impact-counter">
+                    <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2" id="clubs-count">0</div>
+                    <div class="text-lg md:text-xl uppercase tracking-wider">Active Clubs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">About Ubuntu NGO</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-sm md:text-base">"Ubuntu" is a Nguni Bantu term meaning "humanity" or "I am because we are." Our NGO embodies this philosophy by building community through education, empowerment, and mutual support.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Our Mission & Vision</h3>
+                    <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">We aim to create a generation of empowered African youth who are proud of their heritage, equipped with essential life skills, and prepared to lead their communities towards a brighter future.</p>
+                    <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">Through Pan-African studies, we teach children about the rich history, cultures, and contributions of African civilizations. Our feminine hygiene program ensures that girls can attend school without interruption during their menstrual cycles.</p>
+                    <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Our diverse clubs provide safe spaces for children to explore their talents, develop critical thinking, and cultivate leadership skills.</p>
+                    <a href="#involve" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold transition inline-block text-center">Join Our Mission</a>
+                </div>
+                <div class="overflow-hidden border-4 border-red-600">
+                    <img src="IMAGES/WhatsApp Image 2026-02-06 at 22.30.54.jpeg" alt="Children learning in classroom" class="w-full h-auto grayscale hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">Our Core Programs</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-sm md:text-base">We focus on two essential programs that address both educational and practical needs of the children in our communities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                <!-- Pan-African Studies Program -->
+                <div class="pan-african-bg text-white overflow-hidden border-t-8 border-red-600">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-red-600 p-3 mr-4">
+                                <i class="fas fa-globe-africa text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Pan-African Studies</h3>
+                        </div>
+                        <p class="mb-6">We provide comprehensive African history and cultural education to children, helping them develop pride in their heritage and understand their place in the global community.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> African history and civilizations</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> Cultural traditions and languages</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> African leaders and change-makers</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> Contemporary African issues</li>
+                        </ul>
+                        <a href="#contact" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-black font-semibold transition inline-block">Enroll a Child</a>
+                    </div>
+                </div>
+                
+                <!-- Feminine Products Program -->
+                <div class="feminine-hygiene-bg text-white overflow-hidden border-t-8 border-green-600">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-pink-600 p-3 mr-4">
+                                <i class="fas fa-hand-holding-heart text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Feminine Hygiene Support</h3>
+                        </div>
+                        <p class="mb-6">We distribute free sanitary products to girls and women in need, ensuring they can participate fully in education and daily life without interruption during their menstrual cycles.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> Monthly sanitary product distribution</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> Menstrual health education</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> Reusable pad workshops</li>
+                            <li><i class="fas fa-check text-green-400 mr-2"></i> Community support groups</li>
+                        </ul>
+                        <a href="#involve" class="px-6 py-3 bg-white hover:bg-gray-200 text-black font-semibold transition inline-block">Support This Program</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section id="clubs" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">Our Clubs & Activities</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-sm md:text-base">We cultivate diverse clubs that help children explore their interests, develop skills, and build confidence in a supportive environment.</p>
+            </div>
+            
+            <!-- Gallery Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 mb-8 md:mb-12">
+                <div class="overflow-hidden">
+                    <img src="IMAGES/WhatsApp Image 2026-02-06 at 22.24.37.jpeg" alt="Club Activity 1" class="w-full h-48 md:h-64 object-cover object-top hover:scale-110 transition duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="IMAGES/WhatsApp Image 2026-02-06 at 22.24.37 (1).jpeg" alt="Club Activity 2" class="w-full h-48 md:h-64 object-cover object-top hover:scale-110 transition duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="IMAGES/WhatsApp Image 2026-02-06 at 22.24.37 (2).jpeg" alt="Club Activity 3" class="w-full h-48 md:h-64 object-cover object-top hover:scale-110 transition duration-300">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="IMAGES/WhatsApp Image 2026-02-06 at 22.24.37 (3).jpeg" alt="Club Activity 4" class="w-full h-48 md:h-64 object-cover object-top hover:scale-110 transition duration-300">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Club cards -->
+                <div class="club-card bg-white p-4 md:p-6">
+                    <div class="flex items-center mb-3 md:mb-4">
+                        <div class="bg-red-600 p-2 md:p-3 mr-3 md:mr-4">
+                            <i class="fas fa-comments text-white text-lg md:text-xl"></i>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold">Debate Club</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm md:text-base">Develop critical thinking and public speaking skills through structured debates on important topics.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-600 p-3 mr-4">
+                            <i class="fas fa-music text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Music Club</h3>
+                    </div>
+                    <p class="text-gray-700">Explore traditional and contemporary African music, learn instruments, and form performing groups.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-600 p-3 mr-4">
+                            <i class="fas fa-newspaper text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Journalism Club</h3>
+                    </div>
+                    <p class="text-gray-700">Learn reporting skills, publish a school newspaper, and document community stories.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-600 p-3 mr-4">
+                            <i class="fas fa-seedling text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Agriculture Club</h3>
+                    </div>
+                    <p class="text-gray-700">Learn sustainable farming techniques, grow school gardens, and understand food systems.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-600 p-3 mr-4">
+                            <i class="fas fa-leaf text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Environmental Club</h3>
+                    </div>
+                    <p class="text-gray-700">Engage in conservation projects, recycling initiatives, and environmental education.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-600 p-3 mr-4">
+                            <i class="fas fa-theater-masks text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Drama Club</h3>
+                    </div>
+                    <p class="text-gray-700">Express creativity through theater, develop confidence, and perform plays for the community.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-600 p-3 mr-4">
+                            <i class="fas fa-compass text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Scouts Club</h3>
+                    </div>
+                    <p class="text-gray-700">Develop leadership, survival skills, and community service through scouting activities.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-600 p-3 mr-4">
+                            <i class="fas fa-book text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Book Club</h3>
+                    </div>
+                    <p class="text-gray-700">Explore African literature, discuss ideas, and develop a love for reading and critical analysis.</p>
+                </div>
+                
+                <div class="club-card bg-white p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-black p-3 mr-4">
+                            <i class="fas fa-futbol text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Football Team</h3>
+                    </div>
+                    <p class="text-gray-700">Build teamwork, discipline, and physical fitness through organized football training and matches.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold transition inline-block">Start a Club at Your School</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="involve" class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-800">Get Involved</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto mt-4 text-sm md:text-base">Join us in empowering the next generation of African leaders. There are many ways to support our mission.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <!-- Volunteer -->
+                <div class="bg-white p-6 md:p-8 text-center border-t-4 border-blue-600">
+                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-blue-600 mb-4 md:mb-6">
+                        <i class="fas fa-hands-helping text-white text-lg md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Volunteer</h3>
+                    <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Share your skills and time with our programs. We need teachers, mentors, coaches, and administrative support.</p>
+                    <button onclick="openVolunteerForm()" class="px-4 py-2 md:px-6 md:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold transition text-sm md:text-base">Become a Volunteer</button>
+                </div>
+                
+                <!-- Partner -->
+                <div class="bg-white p-6 md:p-8 text-center border-t-4 border-purple-600">
+                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-purple-600 mb-4 md:mb-6">
+                        <i class="fas fa-handshake text-white text-lg md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Partner With Us</h3>
+                    <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Schools, businesses, and organizations can partner with us to expand our reach and impact.</p>
+                    <button onclick="openPartnerForm()" class="px-4 py-2 md:px-6 md:py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold transition text-sm md:text-base">Partner Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-16 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-white">Contact Us</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto mt-4 text-sm md:text-base">Get in touch to learn more about our programs, volunteer opportunities, or partnership possibilities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Get In Touch</h3>
+                    
+                    <div class="space-y-4 md:space-y-6 mb-6 md:mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-red-600 p-2 md:p-3 mr-3 md:mr-4 min-w-[50px] text-center">
+                                <i class="fas fa-map-marker-alt text-sm md:text-base"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-sm md:text-base">Location</h4>
+                                <p class="text-gray-300 text-sm md:text-base">Nsawam Mahama Krom,<br>Ghana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-red-600 p-3 mr-4 min-w-[50px] text-center">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-gray-300">+233 257 481 840</p>
+                                <p class="text-gray-300">+233 536 421 259</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-red-600 p-3 mr-4 min-w-[50px] text-center">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-gray-300">Ubuntucadets@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-3 md:mb-4 text-sm md:text-base">Follow Our Work</h4>
+                        <div class="flex space-x-3 md:space-x-4">
+                            <a href="#" class="bg-gray-800 hover:bg-red-600 w-10 h-10 flex items-center justify-center transition border border-gray-700">
+                                <i class="fab fa-facebook-f text-sm md:text-base"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-red-600 w-10 h-10 flex items-center justify-center transition border border-gray-700">
+                                <i class="fab fa-twitter text-sm md:text-base"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-red-600 w-10 h-10 flex items-center justify-center transition border border-gray-700">
+                                <i class="fab fa-instagram text-sm md:text-base"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-red-600 w-10 h-10 flex items-center justify-center transition border border-gray-700">
+                                <i class="fab fa-youtube text-sm md:text-base"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-900 p-6 md:p-8 border-l-4 border-red-600">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Send a Message</h3>
+                    <form id="contactForm" class="space-y-4 md:space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm md:text-base">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none text-sm md:text-base" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="px-6 py-2 md:px-8 md:py-3 bg-red-600 hover:bg-red-700 font-bold transition text-sm md:text-base">Send Message</button>
+                    </form>
+                    <div id="contact-success" class="hidden mt-6 text-center">
+                        <svg class="checkmark-animate w-16 h-16 mx-auto mb-4" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" stroke="#16a34a" stroke-width="5" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <h4 class="text-xl font-bold text-white mb-2">Message Sent!</h4>
+                        <p class="text-gray-300">Thank you! We've received your message and will get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 border-t-8 border-red-600">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <a href="#home" class="flex items-center justify-center md:justify-start">
+                        <img src="IMAGES/Ubuntu .PNG" alt="Ubuntu NGO Logo" class="h-10 md:h-12 w-auto">
+                    </a>
+                    <p class="text-gray-400 mt-2 text-sm md:text-base">Empowering Through Education & Community</p>
+                </div>
+                
+                <div class="text-center border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-8">
+                    <p class="text-gray-400 text-sm md:text-base">&copy; <span id="current-year"></span> Ubuntu NGO. All rights reserved.</p>
+                    <p class="text-red-500 mt-1 text-sm md:text-base">"I am because we are."</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for forms -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden overflow-y-auto">
+        <div class="bg-white p-4 md:p-8 max-w-md w-full mx-4 relative my-8">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-600 hover:text-red-600 text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Counter animation for impact stats
+        function animateCounter(elementId, finalValue, duration = 2000) {
+            let element = document.getElementById(elementId);
+            let startValue = 0;
+            let increment = finalValue / (duration / 16); // 60fps
+            let currentValue = startValue;
+            
+            function updateCounter() {
+                currentValue += increment;
+                if (currentValue < finalValue) {
+                    element.textContent = Math.floor(currentValue).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = finalValue.toLocaleString();
+                }
+            }
+            
+            updateCounter();
+        }
+        
+        // Initialize counters when section is in view
+        const observerOptions = {
+            threshold: 0.3
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Start counters
+                    animateCounter('children-count', 2450);
+                    animateCounter('products-count', 18500);
+                    animateCounter('clubs-count', 87);
+                    
+                    // Stop observing after animation
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe the hero section for counter animation
+        const heroSection = document.getElementById('home');
+        observer.observe(heroSection);
+        
+        // Modal functions
+        const modal = document.getElementById('modal');
+        const closeModal = document.getElementById('close-modal');
+        const modalContent = document.getElementById('modal-content');
+        
+        function openModal(title, content) {
+            modalContent.innerHTML = `
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">${title}</h3>
+                ${content}
+            `;
+            modal.classList.remove('hidden');
+        }
+        
+        function openVolunteerForm() {
+            const formContent = `
+                <p class="text-gray-700 mb-6">Fill out this form to express your interest in volunteering with Ubuntu NGO.</p>
+                <form class="space-y-4" onsubmit="handleFormSubmit(event, 'Volunteer')">
+                    <div>
+                        <label class="block mb-1 text-gray-700">Full Name</label>
+                        <input type="text" name="name" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Email</label>
+                        <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Area of Interest</label>
+                        <select name="area_of_interest" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                            <option value="">Select an area</option>
+                            <option value="teaching">Teaching Pan-African Studies</option>
+                            <option value="clubs">Club Facilitation</option>
+                            <option value="distribution">Feminine Product Distribution</option>
+                            <option value="admin">Administrative Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Message</label>
+                        <textarea name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold transition">Submit Volunteer Application</button>
+                </form>
+            `;
+            openModal('Volunteer With Us', formContent);
+        }
+        
+        function openPartnerForm() {
+            const formContent = `
+                <p class="text-gray-700 mb-6">Tell us about your organization and how you'd like to partner with Ubuntu NGO.</p>
+                <form class="space-y-4" onsubmit="handleFormSubmit(event, 'Partner')">
+                    <div>
+                        <label class="block mb-1 text-gray-700">Your Name</label>
+                        <input type="text" name="name" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Organization Name</label>
+                        <input type="text" name="organization_name" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Email</label>
+                        <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Type of Partnership</label>
+                        <select name="partnership_type" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none" required>
+                            <option value="">Select partnership type</option>
+                            <option value="corporate">Corporate Sponsorship</option>
+                            <option value="school">School Partnership</option>
+                            <option value="ngo">NGO Collaboration</option>
+                            <option value="community">Community Organization</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-700">Message</label>
+                        <textarea name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 focus:border-red-500 focus:outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold transition">Submit Partnership Inquiry</button>
+                </form>
+            `;
+            openModal('Partner With Us', formContent);
+        }
+        
+        // Close modal when clicking close button or outside modal
+        closeModal.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+        
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+        
+        // Initialize navbar with scrolled class if page is loaded with scroll
+        if (window.scrollY > 50) {
+            document.querySelector('.navbar').classList.add('scrolled');
+        }
+
+        // Handle form submissions without redirect
+        function handleFormSubmit(e, formType) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const name = formData.get('name') || 'there';
+            
+            if (form.closest('#modal-content')) {
+                const successContent = `
+                    <div class="text-center py-8">
+                        <svg class="checkmark-animate w-20 h-20 mx-auto mb-6" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" stroke="#16a34a" stroke-width="5" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Thank You!</h3>
+                        <p class="text-gray-700 mb-6">Thank you, ${name}! We've received your submission and will get back to you soon.</p>
+                        <button onclick="modal.classList.add('hidden')" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold transition">Close</button>
+                    </div>
+                `;
+                const modalContent = form.closest('#modal-content');
+                modalContent.innerHTML = successContent;
+            } else {
+                form.classList.add('hidden');
+                const successDiv = document.getElementById('contact-success');
+                successDiv.classList.remove('hidden');
+            }
+        }
+
+        // Handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            handleFormSubmit(e, 'Contact');
+        });
+
+        // Attach event listeners to modal forms
+        document.addEventListener('submit', function(e) {
+            if (e.target.closest('#modal-content')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
