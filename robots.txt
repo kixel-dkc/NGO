@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kixel-dkc.github.io/NGO/sitemap.xml

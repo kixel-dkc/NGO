@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Page Not Found - Ubuntu NGO</title>
+    <link rel="icon" type="image/png" href="/NGO/IMAGES/ubuntu-logo.png">
+    <link rel="stylesheet" href="/NGO/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-paper text-ink antialiased min-h-screen flex flex-col">
+
+    <main class="flex-1 flex flex-col items-center justify-center px-6 py-24 text-center">
+        <img src="/NGO/IMAGES/ubuntu-logo.png" alt="Ubuntu NGO Logo" class="h-14 w-auto mb-8">
+        <span class="eyebrow text-red-600">Error 404</span>
+        <h1 class="mt-4 text-4xl md:text-5xl font-bold text-ink">This page was not found</h1>
+        <p class="mt-5 max-w-md text-stone-600">The page you're looking for may have moved or no longer exists. Let's get you back on track.</p>
+        <a href="/NGO/" class="mt-8 inline-flex items-center gap-2 rounded-full bg-red-600 hover:bg-red-700 px-7 py-3.5 font-semibold text-white transition">
+            <i class="fas fa-arrow-left text-sm"></i> Back to home
+        </a>
+    </main>
+
+    <footer class="border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-stone-500">
+            &copy; <span id="current-year"></span> Ubuntu NGO. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
