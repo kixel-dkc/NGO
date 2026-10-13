@@ -82,7 +82,7 @@
                 </a>
 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-white text-2xl" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="mobile-menu-button" type="button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-white text-2xl" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -505,7 +505,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-ink">Volunteer</h3>
                     <p class="mt-3 text-stone-600 flex-1">Share your skills and time. We need teachers, mentors, coaches, and administrative support.</p>
-                    <button onclick="openVolunteerForm()" class="mt-6 w-full inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">Become a Volunteer</button>
+                    <button type="button" onclick="openVolunteerForm()" class="mt-6 w-full inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">Become a Volunteer</button>
                 </div>
 
                 <!-- Donate -->
@@ -528,7 +528,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-ink">Partner With Us</h3>
                     <p class="mt-3 text-stone-600 flex-1">Schools, businesses, and organizations can partner with us to expand our reach.</p>
-                    <button onclick="openPartnerForm()" class="mt-6 w-full inline-flex items-center justify-center rounded-full bg-ink hover:bg-ink-soft px-6 py-3 font-semibold text-white transition">Partner Inquiry</button>
+                    <button type="button" onclick="openPartnerForm()" class="mt-6 w-full inline-flex items-center justify-center rounded-full bg-ink hover:bg-ink-soft px-6 py-3 font-semibold text-white transition">Partner Inquiry</button>
                 </div>
             </div>
         </div>
@@ -692,9 +692,9 @@
                 <p class="mt-3 text-sm text-white/70">Trusted by schools and families across Ghana, Kenya, and the USA.</p>
                 <p class="mt-4 text-green-500 font-display font-semibold">"I am because we are."</p>
                 <form id="newsletterForm" class="mt-6">
-                    <label class="block text-sm font-semibold text-white mb-2">Stay in the loop</label>
+                    <label for="newsletter-email" class="block text-sm font-semibold text-white mb-2">Stay in the loop</label>
                     <div class="flex flex-col sm:flex-row gap-3">
-                        <input type="email" name="email" placeholder="Your email address" required class="flex-1 rounded-full bg-white/10 border border-white/15 px-5 py-3 text-white placeholder-white/50 focus:outline-none focus:border-green-500">
+                        <input id="newsletter-email" type="email" name="email" placeholder="Your email address" required class="flex-1 rounded-full bg-white/10 border border-white/15 px-5 py-3 text-white placeholder-white/50 focus:outline-none focus:border-green-500">
                         <input type="text" name="botcheck" tabindex="-1" autocomplete="off" class="absolute left-[-9999px] w-0 h-0 opacity-0" aria-hidden="true">
                         <button type="submit" class="rounded-full bg-green-500 hover:bg-green-400 px-6 py-3 font-semibold text-black transition">Subscribe</button>
                     </div>
@@ -755,7 +755,7 @@
     <!-- Modal for forms -->
     <div id="modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start sm:items-center justify-center z-50 hidden overflow-y-auto p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-8 max-w-md w-full relative my-auto max-h-[calc(100vh-2rem)] overflow-y-auto">
-            <button id="close-modal" class="absolute top-3 right-3 inline-flex items-center justify-center w-10 h-10 rounded-full text-gray-500 hover:text-red-600 hover:bg-stone-100 text-xl transition" aria-label="Close">
+            <button id="close-modal" type="button" class="absolute top-3 right-3 inline-flex items-center justify-center w-10 h-10 rounded-full text-gray-500 hover:text-red-600 hover:bg-stone-100 text-xl transition" aria-label="Close">
                 <i class="fas fa-times"></i>
             </button>
             <div id="modal-content"></div>
@@ -1136,7 +1136,7 @@
                         <p class="text-gray-700 mb-6">${conf.success}</p>
                         ${extra}
                         <div class="mt-8">
-                            <button onclick="closeModalUI()" class="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white font-semibold transition">Close</button>
+                            <button type="button" onclick="closeModalUI()" class="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700 text-white font-semibold transition">Close</button>
                         </div>
                     </div>
                 `;
