@@ -14,7 +14,36 @@
     <meta name="twitter:title" content="Ubuntu NGO - Empowering Through Education & Community">
     <meta name="twitter:description" content="Building community through education, empowerment, and mutual support across Africa.">
     <meta name="twitter:image" content="IMAGES/hero.jpeg">
+    <link rel="canonical" href="https://kixel-dkc.github.io/NGO/">
     <link rel="icon" type="image/png" href="IMAGES/ubuntu-logo.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Ubuntu NGO",
+        "url": "https://kixel-dkc.github.io/NGO/",
+        "logo": "https://kixel-dkc.github.io/NGO/IMAGES/ubuntu-logo.png",
+        "image": "https://kixel-dkc.github.io/NGO/IMAGES/hero.jpeg",
+        "description": "Ubuntu NGO teaches Pan-African studies to children, distributes feminine hygiene products, and cultivates clubs that empower youth across Africa.",
+        "slogan": "I am because we are.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nsawam Mahama Krom",
+            "addressCountry": "GH"
+        },
+        "sameAs": [
+            "https://gofund.me/8fea60eaa"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "Ubuntucadets@gmail.com",
+            "telephone": "+233257481840",
+            "availableLanguage": "English"
+        }
+    }
+    </script>
 
     <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -29,6 +58,8 @@
 </head>
 <body class="bg-paper text-ink antialiased">
 
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">Skip to content</a>
+
     <!-- Navigation -->
     <nav class="navbar fixed top-0 left-0 w-full z-50 py-4">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -38,11 +69,11 @@
 
             <!-- Desktop menu -->
             <ul class="hidden lg:flex items-center gap-9">
-                <li><a href="#about" class="nav-link text-sm font-medium text-white/85 hover:text-white transition">About</a></li>
-                <li><a href="#programs" class="nav-link text-sm font-medium text-white/85 hover:text-white transition">Programs</a></li>
-                <li><a href="#clubs" class="nav-link text-sm font-medium text-white/85 hover:text-white transition">Clubs</a></li>
-                <li><a href="#involve" class="nav-link text-sm font-medium text-white/85 hover:text-white transition">Get Involved</a></li>
-                <li><a href="#contact" class="nav-link text-sm font-medium text-white/85 hover:text-white transition">Contact</a></li>
+                <li><a href="#about" class="nav-link text-sm font-medium text-white/85 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">About</a></li>
+                <li><a href="#programs" class="nav-link text-sm font-medium text-white/85 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Programs</a></li>
+                <li><a href="#clubs" class="nav-link text-sm font-medium text-white/85 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Clubs</a></li>
+                <li><a href="#involve" class="nav-link text-sm font-medium text-white/85 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Get Involved</a></li>
+                <li><a href="#contact" class="nav-link text-sm font-medium text-white/85 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Contact</a></li>
             </ul>
 
             <div class="flex items-center gap-3">
@@ -60,17 +91,19 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="lg:hidden hidden absolute top-full left-0 w-full bg-ink border-t border-white/10 py-4">
             <ul class="flex flex-col items-center gap-1">
-                <li class="w-full"><a href="#about" class="block py-3 text-center text-white/90 hover:text-white transition">About</a></li>
-                <li class="w-full"><a href="#programs" class="block py-3 text-center text-white/90 hover:text-white transition">Programs</a></li>
-                <li class="w-full"><a href="#clubs" class="block py-3 text-center text-white/90 hover:text-white transition">Clubs</a></li>
-                <li class="w-full"><a href="#involve" class="block py-3 text-center text-white/90 hover:text-white transition">Get Involved</a></li>
-                <li class="w-full"><a href="#contact" class="block py-3 text-center text-white/90 hover:text-white transition">Contact</a></li>
+                <li class="w-full"><a href="#about" class="block py-3 text-center text-white/90 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">About</a></li>
+                <li class="w-full"><a href="#programs" class="block py-3 text-center text-white/90 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Programs</a></li>
+                <li class="w-full"><a href="#clubs" class="block py-3 text-center text-white/90 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Clubs</a></li>
+                <li class="w-full"><a href="#involve" class="block py-3 text-center text-white/90 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Get Involved</a></li>
+                <li class="w-full"><a href="#contact" class="block py-3 text-center text-white/90 hover:text-white transition aria-[current=page]:text-green-500 aria-[current=page]:font-semibold">Contact</a></li>
                 <li class="w-full px-6 pt-3">
                     <a href="https://gofund.me/8fea60eaa" target="_blank" rel="noopener" class="block rounded-full bg-red-600 hover:bg-red-700 px-5 py-3 text-center font-semibold text-white transition">Donate Now</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <main id="main">
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg relative min-h-[90vh] flex items-center pt-28 pb-14">
@@ -197,7 +230,7 @@
                 <!-- Feminine Products Program -->
                 <div class="group rounded-2xl overflow-hidden shadow-card border border-stone-100">
                     <div class="feminine-hygiene-bg text-white p-7 md:p-8 min-h-[280px] flex flex-col justify-end">
-                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-pink-600 mb-5">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-green-600 mb-5">
                             <i class="fas fa-hand-holding-heart text-xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold">Feminine Hygiene Support</h3>
@@ -280,16 +313,16 @@
             <!-- Gallery -->
             <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
                 <div class="overflow-hidden rounded-2xl">
-                    <img src="IMAGES/club-1.jpeg" alt="Club activity" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
+                    <img src="IMAGES/club-1.jpeg" alt="Students collaborating during an Ubuntu NGO club session" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="overflow-hidden rounded-2xl">
-                    <img src="IMAGES/club-2.jpeg" alt="Club activity" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
+                    <img src="IMAGES/club-2.jpeg" alt="Young people learning a skill in an Ubuntu club activity" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="overflow-hidden rounded-2xl">
-                    <img src="IMAGES/club-3.jpeg" alt="Club activity" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
+                    <img src="IMAGES/club-3.jpeg" alt="Children practising together during an Ubuntu NGO club meeting" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="overflow-hidden rounded-2xl">
-                    <img src="IMAGES/club-4.jpeg" alt="Club activity" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
+                    <img src="IMAGES/club-4.jpeg" alt="Students working as a team in an Ubuntu club workshop" class="w-full h-52 md:h-64 object-cover object-top hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -310,14 +343,14 @@
                     <p class="mt-2 text-sm text-stone-600">Explore traditional and contemporary African music, and form performing groups.</p>
                 </div>
                 <div class="rounded-2xl bg-white border border-stone-100 shadow-card p-6 hover:-translate-y-1 transition">
-                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-600 mb-4">
+                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-ink mb-4">
                         <i class="fas fa-newspaper text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-ink">Journalism Club</h3>
                     <p class="mt-2 text-sm text-stone-600">Learn reporting, publish a school newspaper, and document community stories.</p>
                 </div>
                 <div class="rounded-2xl bg-white border border-stone-100 shadow-card p-6 hover:-translate-y-1 transition">
-                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-yellow-600 mb-4">
+                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-600 mb-4">
                         <i class="fas fa-seedling text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-ink">Agriculture Club</h3>
@@ -331,21 +364,21 @@
                     <p class="mt-2 text-sm text-stone-600">Conservation projects, recycling initiatives, and environmental education.</p>
                 </div>
                 <div class="rounded-2xl bg-white border border-stone-100 shadow-card p-6 hover:-translate-y-1 transition">
-                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-purple-600 mb-4">
+                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-ink mb-4">
                         <i class="fas fa-theater-masks text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-ink">Drama Club</h3>
                     <p class="mt-2 text-sm text-stone-600">Express creativity through theater and perform plays for the community.</p>
                 </div>
                 <div class="rounded-2xl bg-white border border-stone-100 shadow-card p-6 hover:-translate-y-1 transition">
-                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-600 mb-4">
+                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-red-600 mb-4">
                         <i class="fas fa-compass text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-ink">Scouts Club</h3>
                     <p class="mt-2 text-sm text-stone-600">Develop leadership, survival skills, and community service.</p>
                 </div>
                 <div class="rounded-2xl bg-white border border-stone-100 shadow-card p-6 hover:-translate-y-1 transition">
-                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-orange-600 mb-4">
+                    <div class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-600 mb-4">
                         <i class="fas fa-book text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-ink">Book Club</h3>
@@ -380,12 +413,12 @@
             <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Volunteer -->
                 <div class="rounded-2xl border border-stone-100 shadow-card p-7 flex flex-col">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-600 mb-6">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-red-600 mb-6">
                         <i class="fas fa-hands-helping text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold text-ink">Volunteer</h3>
                     <p class="mt-3 text-stone-600 flex-1">Share your skills and time. We need teachers, mentors, coaches, and administrative support.</p>
-                    <button onclick="openVolunteerForm()" class="mt-6 inline-flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 px-6 py-3 font-semibold text-white transition">Become a Volunteer</button>
+                    <button onclick="openVolunteerForm()" class="mt-6 inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">Become a Volunteer</button>
                 </div>
 
                 <!-- Donate -->
@@ -403,12 +436,12 @@
 
                 <!-- Partner -->
                 <div class="rounded-2xl border border-stone-100 shadow-card p-7 flex flex-col">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-purple-600 mb-6">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-ink mb-6">
                         <i class="fas fa-handshake text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold text-ink">Partner With Us</h3>
                     <p class="mt-3 text-stone-600 flex-1">Schools, businesses, and organizations can partner with us to expand our reach.</p>
-                    <button onclick="openPartnerForm()" class="mt-6 inline-flex items-center justify-center rounded-full bg-purple-600 hover:bg-purple-700 px-6 py-3 font-semibold text-white transition">Partner Inquiry</button>
+                    <button onclick="openPartnerForm()" class="mt-6 inline-flex items-center justify-center rounded-full bg-ink hover:bg-ink-soft px-6 py-3 font-semibold text-white transition">Partner Inquiry</button>
                 </div>
             </div>
         </div>
@@ -561,6 +594,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="bg-ink text-white/70 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -711,6 +746,27 @@
         // Observe the hero section for counter animation
         const heroSection = document.getElementById('home');
         observer.observe(heroSection);
+
+        // Active nav state on scroll
+        const spyIds = ['about', 'programs', 'clubs', 'involve', 'contact'];
+        const spyObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                const currentId = entry.target.id;
+                document.querySelectorAll('.navbar a[href^="#"]').forEach(function(link) {
+                    if (link.getAttribute('href') === '#' + currentId) {
+                        link.setAttribute('aria-current', 'page');
+                    } else if (link.hasAttribute('aria-current')) {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+        spyIds.forEach(function(id) {
+            const section = document.getElementById(id);
+            if (section) spyObserver.observe(section);
+        });
 
         // Modal functions
         const modal = document.getElementById('modal');
