@@ -28,6 +28,15 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
         letter-spacing: -0.02em;
+        text-wrap: balance;
+    }
+
+    section[id] {
+        scroll-margin-top: 5.5rem;
+    }
+
+    img {
+        max-width: 100%;
     }
 
     a:focus-visible,

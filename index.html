@@ -82,7 +82,7 @@
                 </a>
 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="lg:hidden text-white text-2xl" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="mobile-menu-button" class="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-white text-2xl" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -106,17 +106,17 @@
     <main id="main">
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg relative min-h-[90vh] flex items-center pt-28 pb-14">
+    <section id="home" class="hero-bg relative min-h-[90vh] flex items-center pt-24 pb-12 sm:pt-28 sm:pb-14">
         <div class="max-w-7xl mx-auto px-6 w-full text-white">
             <div class="max-w-2xl">
                 <span class="eyebrow text-green-400">Education &middot; Heritage &middot; Community</span>
                 <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">Empowering the next generation of African leaders</h1>
                 <p class="mt-5 text-base md:text-lg text-white/80 max-w-xl">We teach children the history, heroes, and cultures of Africa - and provide the products and mentorship they need to stay in school and grow into leaders.</p>
                 <div class="mt-7 flex flex-col sm:flex-row gap-3">
-                    <a href="https://gofund.me/8fea60eaa" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">
+                    <a href="https://gofund.me/8fea60eaa" target="_blank" rel="noopener" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">
                         <i class="fas fa-heart"></i> Donate now
                     </a>
-                    <a href="#programs" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 hover:bg-white hover:text-ink px-6 py-3 font-semibold text-white transition">
+                    <a href="#programs" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-white/40 hover:bg-white hover:text-ink px-6 py-3 font-semibold text-white transition">
                         Explore our programs
                     </a>
                 </div>
@@ -124,15 +124,15 @@
 
             <!-- Impact Stats -->
             <div class="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/10 backdrop-blur">
-                <div class="bg-black/20 p-5 md:p-6 text-center impact-counter">
+                <div class="bg-black/20 p-4 sm:p-5 md:p-6 text-center impact-counter">
                     <div class="text-3xl md:text-4xl font-bold text-green-400 mb-1" id="children-count">0</div>
                     <div class="text-xs md:text-sm uppercase tracking-widest text-white/70">Children Educated</div>
                 </div>
-                <div class="bg-black/20 p-5 md:p-6 text-center impact-counter">
+                <div class="bg-black/20 p-4 sm:p-5 md:p-6 text-center impact-counter">
                     <div class="text-3xl md:text-4xl font-bold text-green-400 mb-1" id="products-count">0</div>
                     <div class="text-xs md:text-sm uppercase tracking-widest text-white/70">Products Distributed</div>
                 </div>
-                <div class="bg-black/20 p-5 md:p-6 text-center impact-counter">
+                <div class="bg-black/20 p-4 sm:p-5 md:p-6 text-center impact-counter">
                     <div class="text-3xl md:text-4xl font-bold text-green-400 mb-1" id="clubs-count">0</div>
                     <div class="text-xs md:text-sm uppercase tracking-widest text-white/70">Active Clubs</div>
                 </div>
@@ -505,7 +505,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-ink">Volunteer</h3>
                     <p class="mt-3 text-stone-600 flex-1">Share your skills and time. We need teachers, mentors, coaches, and administrative support.</p>
-                    <button onclick="openVolunteerForm()" class="mt-6 inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">Become a Volunteer</button>
+                    <button onclick="openVolunteerForm()" class="mt-6 w-full inline-flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 px-6 py-3 font-semibold text-white transition">Become a Volunteer</button>
                 </div>
 
                 <!-- Donate -->
@@ -528,7 +528,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-ink">Partner With Us</h3>
                     <p class="mt-3 text-stone-600 flex-1">Schools, businesses, and organizations can partner with us to expand our reach.</p>
-                    <button onclick="openPartnerForm()" class="mt-6 inline-flex items-center justify-center rounded-full bg-ink hover:bg-ink-soft px-6 py-3 font-semibold text-white transition">Partner Inquiry</button>
+                    <button onclick="openPartnerForm()" class="mt-6 w-full inline-flex items-center justify-center rounded-full bg-ink hover:bg-ink-soft px-6 py-3 font-semibold text-white transition">Partner Inquiry</button>
                 </div>
             </div>
         </div>
@@ -724,16 +724,16 @@
                     <li>+233 257 481 840</li>
                 </ul>
                 <div class="flex gap-2.5 mt-5">
-                    <a href="#" aria-label="Ubuntu NGO on Facebook" class="bg-white/5 hover:bg-red-600 w-9 h-9 rounded-lg flex items-center justify-center transition border border-white/10">
+                    <a href="#" aria-label="Ubuntu NGO on Facebook" class="bg-white/5 hover:bg-red-600 w-10 h-10 rounded-lg flex items-center justify-center transition border border-white/10">
                         <i class="fab fa-facebook-f text-sm" aria-hidden="true"></i>
                     </a>
-                    <a href="#" aria-label="Ubuntu NGO on Twitter" class="bg-white/5 hover:bg-red-600 w-9 h-9 rounded-lg flex items-center justify-center transition border border-white/10">
+                    <a href="#" aria-label="Ubuntu NGO on Twitter" class="bg-white/5 hover:bg-red-600 w-10 h-10 rounded-lg flex items-center justify-center transition border border-white/10">
                         <i class="fab fa-twitter text-sm" aria-hidden="true"></i>
                     </a>
-                    <a href="#" aria-label="Ubuntu NGO on Instagram" class="bg-white/5 hover:bg-red-600 w-9 h-9 rounded-lg flex items-center justify-center transition border border-white/10">
+                    <a href="#" aria-label="Ubuntu NGO on Instagram" class="bg-white/5 hover:bg-red-600 w-10 h-10 rounded-lg flex items-center justify-center transition border border-white/10">
                         <i class="fab fa-instagram text-sm" aria-hidden="true"></i>
                     </a>
-                    <a href="#" aria-label="Ubuntu NGO on YouTube" class="bg-white/5 hover:bg-red-600 w-9 h-9 rounded-lg flex items-center justify-center transition border border-white/10">
+                    <a href="#" aria-label="Ubuntu NGO on YouTube" class="bg-white/5 hover:bg-red-600 w-10 h-10 rounded-lg flex items-center justify-center transition border border-white/10">
                         <i class="fab fa-youtube text-sm" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -754,8 +754,8 @@
 
     <!-- Modal for forms -->
     <div id="modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start sm:items-center justify-center z-50 hidden overflow-y-auto p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="bg-white rounded-2xl p-6 md:p-8 max-w-md w-full mx-4 relative my-auto max-h-[calc(100vh-2rem)] overflow-y-auto">
-            <button id="close-modal" class="absolute top-4 right-4 text-gray-600 hover:text-red-600 text-2xl" aria-label="Close">
+        <div class="bg-white rounded-2xl p-5 sm:p-6 md:p-8 max-w-md w-full relative my-auto max-h-[calc(100vh-2rem)] overflow-y-auto">
+            <button id="close-modal" class="absolute top-3 right-3 inline-flex items-center justify-center w-10 h-10 rounded-full text-gray-500 hover:text-red-600 hover:bg-stone-100 text-xl transition" aria-label="Close">
                 <i class="fas fa-times"></i>
             </button>
             <div id="modal-content"></div>
